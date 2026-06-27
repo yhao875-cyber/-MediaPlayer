@@ -1,19 +1,3 @@
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-    }
-}
-
-allprojects {
-    repositories {
-        mavenCentral()
-    }
-}
-
 # 媒体播放器 - Android 4.1 兼容版
 
 ## 功能
@@ -70,5 +54,3 @@ MediaPlayer/
 | 视频 | MP4 (H.264), 3GP, WebM, RTSP |
 | 音频 | MP3, AAC, OGG, WAV, FLAC |
 | 直播 | M3U8 (HLS), RTSP |
-
-include ':app'

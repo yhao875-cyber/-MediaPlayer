@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 视频 Tab -->
+            <ScrollView
+                android:id="@+id/tab_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="在线视频播放"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="视频地址 (支持 MP4 / RTSP / M3U8):"
+                        android:textSize="13sp"
+                        android:paddingBottom="4dp"/>
+
+                    <EditText
+                        android:id="@+id/et_video_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="输入视频 URL"
+                        android:inputType="textUri"
+                        android:singleLine="true"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/btn_play_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="▶ 播放视频" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例视频："
+                        android:textSize="13sp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="4dp"/>
+
+                    <Button
+                        android:id="@+id/btn_sample_video1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例1：MP4 测试视频"
+                        android:textSize="13sp"/>
+
+                    <Button
+                        android:id="@+id/btn_sample_video2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例2：RTSP 流媒体"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- 音乐 Tab -->
+            <ScrollView
+                android:id="@+id/tab_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="在线音乐播放"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="音乐地址 (支持 MP3 / AAC / OGG):"
+                        android:textSize="13sp"
+                        android:paddingBottom="4dp"/>
+
+                    <EditText
+                        android:id="@+id/et_music_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="输入音乐 URL"
+                        android:inputType="textUri"
+                        android:singleLine="true"
+                        android:textSize="13sp"/>
+
+                    <Button
+                        android:id="@+id/btn_play_music"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="♪ 播放音乐" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例音乐："
+                        android:textSize="13sp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="4dp"/>
+
+                    <Button
+                        android:id="@+id/btn_sample_music1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例1：网易云音乐 MP3"
+                        android:textSize="13sp"/>
+
+                    <Button
+                        android:id="@+id/btn_sample_music2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="示例2：古典音乐 MP3"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
